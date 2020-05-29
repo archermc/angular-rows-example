@@ -1,0 +1,14 @@
+<ng-container *ngIf="!loading; else loadingSpinner">
+  <label>Enter a date:</label>
+  <mat-form-field color="accent">
+    <mat-label>Select a date</mat-label>
+    <input matInput [matDatepicker]="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  <input type="text" #input>
+  <button type="submit" (click)="onClick(input.value)">Submit</button>
+</ng-container>
+<ng-template #loadingSpinner>
+  <mat-spinner></mat-spinner>
+</ng-template>
