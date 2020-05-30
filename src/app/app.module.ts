@@ -12,6 +12,9 @@ import { DatePickerComponent } from './components/date-picker/date-picker.compon
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -30,9 +33,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatProgressSpinnerModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    MatMomentDateModule,
+    MatInputModule,
+    MatButtonModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    MatMomentDateModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

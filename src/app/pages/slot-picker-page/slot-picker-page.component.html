@@ -1,6 +1,8 @@
-<div fxDirection="column">
+<div fxLayout="column">
   <label class="date">{{date}}</label>
-  <adr-slot-picker
-    [slots]="slots$ | async"
-  ></adr-slot-picker>
+  <div *ngIf="slots$ | async as slots">
+    <adr-slot-picker
+      [slots]="slots"
+    ></adr-slot-picker>
+  </div>
 </div>

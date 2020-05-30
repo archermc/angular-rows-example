@@ -1,1 +1,5 @@
-slot picker
+<div *ngFor="let slot of slots" class="slot-container">
+  <adr-slot
+    [slot]="slot"
+  ></adr-slot>
+</div>
